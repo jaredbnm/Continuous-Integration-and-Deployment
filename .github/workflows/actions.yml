@@ -11,5 +11,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Deploy to cloud
-        run: echo "Deploying to cloud infrastructure..."
+      - name: Install Vercel
+        run: npm install -g vercel
+      - name: Deploying
+        run: vercel --prod --token ${{ secrets.VERCEL }}
