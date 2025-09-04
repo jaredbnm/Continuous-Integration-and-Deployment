@@ -14,4 +14,4 @@ jobs:
       - name: Install Vercel
         run: npm install -g vercel
       - name: Deploying
-        run: vercel --prod --token ${{ secrets.VERCEL }}
+        run: vercel --prod --yes --token ${{ secrets.VERCEL }}
